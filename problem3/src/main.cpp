@@ -21,13 +21,49 @@ std::string readDataFromFile(const std::string path)
     std::string data;
     data = buffer;
     delete[] buffer;
-    assert(false && "Cant read file!");
-
     return data;
 }
 
+std::string solveProblem(const std::string& data){
+    std::string result = data;
+    int size = result.size();
+    int startIndex =0;
+    int endIndex =size-1;;
+    for (auto it = (result.end()-1); it != (result.begin() + startIndex);)
+    {
+        if(*it!=' '){
+            break;
+        }
+        if (((*it) == ' ')){
+            it = result.erase(it);
+            endIndex--;
+        }
+        else{
+            --it;
+        }
+    }
+    for (auto it = result.begin(); it != (result.end() + endIndex);)
+    {
+        if (*it != ' ')
+        {
+            break;
+        }
+        if (((*it) == ' '))
+        {
+            it = result.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+    return result;
+}
 int main(int argc, char const *argv[])
 {
-    std::string data = readDataFromFile("data.txt");
+    std::string data = readDataFromFile("../../src/data.txt");
+    std::string result = solveProblem(data);
+    std::cout<<"RESULT:\n";
+    std::cout<<result<<'\n';
     return 0;
 }
