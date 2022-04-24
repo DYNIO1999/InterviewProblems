@@ -11,14 +11,6 @@
 #include "Circle.h"
 #include "Rect.h"
 
-
-/*
-Napisz wizualizator kolizji koła (statycznie położonego na środku ekranu) i obracającego się
-prostokąta (obrót poprzez naciśnięcie odpowiednich klawiszy np. q, e albo strzałki). Kolizja
-powinna być zasygnalizowana np. poprzez komunikat lub zmianę koloru obiektów.
-*/
-
-
 static GLFWwindow* window;
 static glm::mat4 projection = glm::mat4(1);
 static glm::mat4 view = glm::mat4(1);
