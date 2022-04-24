@@ -2,7 +2,7 @@
 
 
 # Problem 1:
-Used Separating Axis Theorem (SAT) to solve this problem.
+Used Separating Axis Theorem (SAT) to solve the problem.
 
 
 # Problem 2:
